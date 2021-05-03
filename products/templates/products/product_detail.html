@@ -1,0 +1,15 @@
+{% extends 'products/base.html' %}    
+    
+{% block content %}
+        <h2>{{ product.title }}</h2>
+        {% if product.description  %}
+            <p>{{ product.description }}</p>
+        {% else %}
+            <p>description is comming soon</p>
+        {% endif %}
+        <h4>{{ product.price }}</h4>
+        <h6> {{ product.items }}</h6>
+        <h3>want to update the product info? click here >><a href="{{product.update}}">update</a></h3> 
+        <h3>want to delete the product ? click here >><a href="./delete">delete</a></h3> 
+            
+{% endblock %}
